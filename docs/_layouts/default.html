@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if site.theme == "jekyll-theme-hacker" %}
+  <link rel="stylesheet" href="https://unpkg.com/@primer/css@4.1.0/build.min.css">
+  <style>
+    body { display:flex; }
+    nav.sidebar {
+      min-width:210px; max-width:230px; height:100vh;
+      background:#111; color:#fff; overflow-y:auto;
+      padding:2em 1em 1em 1em; position:fixed; left:0; top:0;
+      border-right:2px solid #176; box-sizing:border-box;
+    }
+    nav.sidebar ul { list-style:none; padding:0; margin:0; }
+    nav.sidebar li { margin:.6em 0; }
+    nav.sidebar a {
+      color:#6BE234; text-decoration:none; word-break:break-word;
+      font-weight:500; padding:2px 7px; border-radius:4px;
+      display:block; transition:background .2s;}
+    nav.sidebar a.active, nav.sidebar a:hover {
+      background:#191; color:#fff;
+    }
+    main.page-content {
+      margin-left: 240px; padding:2.5em 2em; width:100%;
+    }
+    @media(max-width:800px){
+        main.page-content{margin-left:0;}
+        nav.sidebar{display:none;}
+    }
+  </style>
+  {%- endif %}
+</head>
+<body>
+  <nav class="sidebar">
+    <h3>{{ site.title }}</h3>
+    <ul>
+      <li><a href="{{ '/docs/index.html' | relative_url }}"{% if page.url == '/docs/index.html' or page.url == '/docs/' or page.url == '/docs/index.md' %} class="active"{% endif %}>Home</a></li>
+      <li><a href="{{ '/docs/protocol-purpose-and-vision.html' | relative_url }}"{% if page.url contains 'protocol-purpose-and-vision' %} class="active"{% endif %}>Protocol Purpose & Vision</a></li>
+      <li><a href="{{ '/docs/survey-of-related-protocols.html' | relative_url }}"{% if page.url contains 'survey-of-related-protocols' %} class="active"{% endif %}>Survey of Related Protocols</a></li>
+      <li><a href="{{ '/docs/core-principles.html' | relative_url }}"{% if page.url contains 'core-principles' %} class="active"{% endif %}>Core Principles</a></li>
+      <li><a href="{{ '/docs/protocol-actors.html' | relative_url }}"{% if page.url contains 'protocol-actors' %} class="active"{% endif %}>Protocol Actors</a></li>
+      <li><a href="{{ '/docs/key-concept-structures.html' | relative_url }}"{% if page.url contains 'key-concept-structures' %} class="active"{% endif %}>Key Concept Structures</a></li>
+      <li><a href="{{ '/docs/agentic-governance-lifecycle.html' | relative_url }}"{% if page.url contains 'agentic-governance-lifecycle' %} class="active"{% endif %}>Agentic Governance Lifecycle</a></li>
+      <li><a href="{{ '/docs/orchestration-patterns.html' | relative_url }}"{% if page.url contains 'orchestration-patterns' %} class="active"{% endif %}>Orchestration Patterns</a></li>
+      <li><a href="{{ '/docs/protocol-lifecycle-phases.html' | relative_url }}"{% if page.url contains 'protocol-lifecycle-phases' %} class="active"{% endif %}>Protocol Lifecycle Phases</a></li>
+      <li><a href="{{ '/docs/communication-patterns.html' | relative_url }}"{% if page.url contains 'communication-patterns' %} class="active"{% endif %}>Communication Patterns</a></li>
+      <li><a href="{{ '/docs/governance-and-trust-mechanisms.html' | relative_url }}"{% if page.url contains 'governance-and-trust-mechanisms' %} class="active"{% endif %}>Governance & Trust Mechanisms</a></li>
+      <li><a href="{{ '/docs/versioning-and-change-management.html' | relative_url }}"{% if page.url contains 'versioning-and-change-management' %} class="active"{% endif %}>Versioning & Change Management</a></li>
+      <li><a href="{{ '/docs/repository-setup-and-best-practices.html' | relative_url }}"{% if page.url contains 'repository-setup-and-best-practices' %} class="active"{% endif %}>Repository Setup & Best Practices</a></li>
+      <li><a href="{{ '/docs/contribution-guidelines.html' | relative_url }}"{% if page.url contains 'contribution-guidelines' %} class="active"{% endif %}>Contribution Guidelines</a></li>
+      <li><a href="{{ '/docs/governance-model-and-decision-making.html' | relative_url }}"{% if page.url contains 'governance-model-and-decision-making' %} class="active"{% endif %}>Governance Model & Decision Making</a></li>
+      <li><a href="{{ '/docs/example-schema-governance-flow.html' | relative_url }}"{% if page.url contains 'example-schema-governance-flow' %} class="active"{% endif %}>Example Schema Governance Flow</a></li>
+      <li><a href="{{ '/docs/agent-roles-and-responsibilities.html' | relative_url }}"{% if page.url contains 'agent-roles-and-responsibilities' %} class="active"{% endif %}>Agent Roles & Responsibilities</a></li>
+      <li><a href="{{ '/docs/community-engagement.html' | relative_url }}"{% if page.url contains 'community-engagement' %} class="active"{% endif %}>Community Engagement</a></li>
+      <li><a href="{{ '/docs/documentation-and-maintenance-best-practices.html' | relative_url }}"{% if page.url contains 'documentation-and-maintenance-best-practices' %} class="active"{% endif %}>Best Practices: Docs & Maintenance</a></li>
+      <li><a href="{{ '/docs/references-and-appendix.html' | relative_url }}"{% if page.url contains 'references-and-appendix' %} class="active"{% endif %}>References & Appendix</a></li>
+    </ul>
+  </nav>
+  <main class="page-content">
+    {{ content }}
+  </main>
+</body>
+</html>
