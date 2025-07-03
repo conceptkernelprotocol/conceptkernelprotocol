@@ -3,6 +3,9 @@ layout: default
 ---
 # Concept Kernel Protocol: Ontological Governance
 
+> **Premise:**  
+> Every day, billions of digital agents are spawned by systems around the world, often to solve similar problems or perform repeated tasks. The Concept Kernel Protocol (CKP) establishes the formation of a Concept Kernel—a self-governing guardian, enforcer, and judge for shared meaning. Each kernel operates according to an established consensus, autonomously governing itself to harmonize knowledge, trust, and evolution across digital ecosystems.
+
 Welcome to the Concept Kernel Protocol documentation and resource hub.
 
 Navigate using the [Concept Map](#concept-map) or the sidebar.
